@@ -1,0 +1,106 @@
+model:
+  name: "bilingual-base"
+  vocab_size: 50000
+  hidden_size: 768
+  num_layers: 12
+  num_heads: 12
+  intermediate_size: 3072
+  max_position_embeddings: 4096
+  rope_theta: 10000.0
+  rope_scaling:
+    type: "linear"
+    factor: 4.0
+
+tokenizer:
+  type: "bpe"
+  vocab_path: "vocab/multilingual_50k"
+  chinese_direct: true
+  max_length: 4096
+
+training:
+  stage: "pretrain"
+  batch_size: 32
+  gradient_accumulation_steps: 4
+  learning_rate: 3.0e-4
+  warmup_steps: 500
+  max_steps: 100000
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-8
+  max_grad_norm: 1.0
+
+data:
+  zh_ratio: 0.5
+  en_ratio: 0.5
+  code_switch_ratio: 0.1
+  pretrain_data_path: "data/processed/pretrain.jsonl"
+  instruction_data_path: "data/processed/instruction.jsonl"
+  translation_pairs_path: "data/processed/translation.jsonl"
+
+curriculum:
+  stages:
+    - name: "stage1_bilingual_pretrain"
+      zh_ratio: 0.5
+      en_ratio: 0.5
+      code_switch_ratio: 0.0
+      target_ppl_zh: 15.0
+      target_ppl_en: 12.0
+      duration_steps: 50000
+    
+    - name: "stage2_alignment"
+      zh_ratio: 0.35
+      en_ratio: 0.35
+      translation_ratio: 0.3
+      duration_steps: 20000
+    
+    - name: "stage3_sft"
+      instruction_ratio: 1.0
+      lora_rank: 128
+      lora_alpha: 256
+      duration_steps: 10000
+    
+    - name: "stage4_dpo"
+      preference_data_ratio: 1.0
+      duration_steps: 5000
+
+lora:
+  enabled: true
+  rank: 128
+  alpha: 256
+  dropout: 0.1
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+    - "k_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+checkpoint:
+  output_dir: "checkpoints/bilingual-base"
+  save_interval: 1000
+  eval_interval: 500
+  log_interval: 10
+  keep_last_n: 3
+
+evaluation:
+  metrics:
+    - "perplexity"
+    - "accuracy"
+    - "bleu"
+  eval_data_path: "data/eval"
+
+logging:
+  level: "info"
+  tensorboard: true
+  tensorboard_dir: "runs/bilingual-base"
+  wandb: false
+  wandb_project: "paperpower"
+
+hardware:
+  device: "cuda"
+  precision: "bf16"
+  gradient_checkpointing: true
+  flash_attention: true

@@ -1,0 +1,22 @@
+{
+  "gatewayUrl": "ws://127.0.0.1",
+  "gatewayPort": 18789,
+  "model": "anthropic/claude-sonnet-4",
+  "thinkingLevel": "high",
+  "verboseLevel": "minimal",
+  "timeout": 60000,
+  "retryAttempts": 3,
+  "skills": {
+    "enabled": true,
+    "autoDiscover": true,
+    "customSkillsPath": "./skills"
+  },
+  "fallback": {
+    "enabled": true,
+    "localProcessing": true
+  },
+  "logging": {
+    "level": "info",
+    "thinkingLog": true
+  }
+}

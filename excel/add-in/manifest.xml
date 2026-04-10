@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xsi:type="TaskPaneApp">
+
+  <Id>a1b2c3d4-e5f6-7890-abcd-ef1234567891</Id>
+  <Version>1.0.0</Version>
+  <ProviderName>智办AI</ProviderName>
+  <DefaultLocale>zh-CN</DefaultLocale>
+  <DisplayName DefaultValue="智办AI - Excel智能助手"/>
+  <Description DefaultValue="Excel多表汇总、公式生成、财务分析AI助手"/>
+  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png"/>
+  <SupportUrl DefaultValue="https://www.paperpower.ai/support"/>
+
+  <Hosts>
+    <Host Name="Workbook"/>
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://localhost:3000/taskpane.html"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Workbook">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="GetStarted.Title"/>
+            <Description resid="GetStarted.Description"/>
+            <LearnMoreUrl resid="GetStarted.LearnMoreUrl"/>
+          </GetStarted>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="PaperPowerGroup">
+                <Label resid="CommandsGroup.Label"/>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                  <bt:Image size="80" resid="Icon.80x80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TaskpaneButton">
+                  <Label resid="TaskpaneButton.Label"/>
+                  <Supertip>
+                    <Title resid="TaskpaneButton.Label"/>
+                    <Description resid="TaskpaneButton.Tooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="Icon.16x16"/>
+                    <bt:Image size="32" resid="Icon.32x32"/>
+                    <bt:Image size="80" resid="Icon.80x80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>ButtonId1</TaskpaneId>
+                    <SourceLocation resid="Taskpane.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+
+          <ExtensionPoint xsi:type="ContextMenu">
+            <OfficeMenu id="ContextMenuCell">
+              <Control xsi:type="Menu" id="PaperPowerContextMenu">
+                <Label resid="ContextMenu.Label"/>
+                <Supertip>
+                  <Title resid="ContextMenu.Label"/>
+                  <Description resid="ContextMenu.Tooltip"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="Icon.16x16"/>
+                  <bt:Image size="32" resid="Icon.32x32"/>
+                </Icon>
+                <Items>
+                  <Item id="ExplainFormula">
+                    <Label resid="ExplainFormula.Label"/>
+                    <Supertip>
+                      <Title resid="ExplainFormula.Label"/>
+                      <Description resid="ExplainFormula.Tooltip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>explainFormula</FunctionName>
+                    </Action>
+                  </Item>
+                  <Item id="OptimizeFormula">
+                    <Label resid="OptimizeFormula.Label"/>
+                    <Supertip>
+                      <Title resid="OptimizeFormula.Label"/>
+                      <Description resid="OptimizeFormula.Tooltip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>optimizeFormula</FunctionName>
+                    </Action>
+                  </Item>
+                  <Item id="FindError">
+                    <Label resid="FindError.Label"/>
+                    <Supertip>
+                      <Title resid="FindError.Label"/>
+                      <Description resid="FindError.Tooltip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>findError</FunctionName>
+                    </Action>
+                  </Item>
+                  <Item id="GenerateFormula">
+                    <Label resid="GenerateFormula.Label"/>
+                    <Supertip>
+                      <Title resid="GenerateFormula.Label"/>
+                      <Description resid="GenerateFormula.Tooltip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon.16x16"/>
+                      <bt:Image size="32" resid="Icon.32x32"/>
+                    </Icon>
+                    <Action xsi:type="ExecuteFunction">
+                      <FunctionName>generateFormula</FunctionName>
+                    </Action>
+                  </Item>
+                </Items>
+              </Control>
+            </OfficeMenu>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+
+    <Resources>
+      <bt:Images>
+        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png"/>
+        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://www.paperpower.ai/learn"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="GetStarted.Title" DefaultValue="欢迎使用智办AI Excel助手"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="智办AI"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="智能助手"/>
+        <bt:String id="ContextMenu.Label" DefaultValue="智办AI"/>
+        <bt:String id="ExplainFormula.Label" DefaultValue="解释此公式"/>
+        <bt:String id="OptimizeFormula.Label" DefaultValue="优化公式"/>
+        <bt:String id="FindError.Label" DefaultValue="查找错误"/>
+        <bt:String id="GenerateFormula.Label" DefaultValue="生成公式"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="GetStarted.Description" DefaultValue="点击按钮打开侧边栏，开始使用多表汇总、公式生成、财务分析等功能。"/>
+        <bt:String id="TaskpaneButton.Tooltip" DefaultValue="打开智办AI智能助手面板"/>
+        <bt:String id="ContextMenu.Tooltip" DefaultValue="智办AI Excel智能功能"/>
+        <bt:String id="ExplainFormula.Tooltip" DefaultValue="AI解读选中单元格中的公式逻辑"/>
+        <bt:String id="OptimizeFormula.Tooltip" DefaultValue="简化冗长公式，提升计算效率"/>
+        <bt:String id="FindError.Tooltip" DefaultValue="追踪公式错误来源，提供修复建议"/>
+        <bt:String id="GenerateFormula.Tooltip" DefaultValue="根据选中区域智能生成公式"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

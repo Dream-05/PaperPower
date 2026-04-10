@@ -1,0 +1,125 @@
+model:
+  name: "bilingual-7b"
+  vocab_size: 50000
+  hidden_size: 4096
+  num_hidden_layers: 32
+  num_attention_heads: 32
+  intermediate_size: 11008
+  max_position_embeddings: 8192
+  rope_theta: 10000.0
+  rope_scaling_type: "linear"
+  rope_scaling_factor: 4.0
+  hidden_dropout: 0.1
+  attention_dropout: 0.1
+  use_flash_attention: true
+  gradient_checkpointing: true
+  chinese_char_vocab_size: 8000
+  use_language_adapters: true
+
+tokenizer:
+  type: "bpe"
+  vocab_path: "vocab/multilingual_50k"
+  chinese_direct: true
+  max_length: 8192
+
+training:
+  batch_size: 8
+  gradient_accumulation_steps: 16
+  learning_rate: 1.0e-4
+  warmup_steps: 2000
+  max_steps: 300000
+  weight_decay: 0.01
+  adam_beta1: 0.9
+  adam_beta2: 0.95
+  adam_epsilon: 1.0e-8
+  max_grad_norm: 1.0
+  use_amp: true
+  amp_dtype: "bf16"
+
+data_config:
+  zh_ratio: 0.5
+  en_ratio: 0.5
+  code_switch_ratio: 0.1
+  max_seq_length: 8192
+  pretrain_data_path: "data/processed/pretrain.jsonl"
+  instruction_data_path: "data/processed/instruction.jsonl"
+  use_hf_datasets: true
+  hf_datasets:
+    - "wikipedia_zh"
+    - "wikipedia_en"
+    - "bookcorpus"
+  num_workers: 4
+
+curriculum_config:
+  enabled: true
+  stages:
+    - name: "stage1_bilingual_pretrain"
+      zh_ratio: 0.5
+      en_ratio: 0.5
+      code_switch_ratio: 0.0
+      target_ppl_zh: 10.0
+      target_ppl_en: 8.0
+      duration_steps: 200000
+    
+    - name: "stage2_alignment"
+      zh_ratio: 0.35
+      en_ratio: 0.35
+      parallel_ratio: 0.3
+      duration_steps: 50000
+    
+    - name: "stage3_sft"
+      instruction_ratio: 1.0
+      lora_rank: 256
+      duration_steps: 20000
+    
+    - name: "stage4_dpo"
+      instruction_ratio: 1.0
+      duration_steps: 10000
+
+lora_config:
+  enabled: false
+  rank: 256
+  alpha: 512
+  dropout: 0.1
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+    - "k_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+
+checkpoint:
+  output_dir: "checkpoints/bilingual-7b"
+  save_interval: 2000
+  eval_interval: 1000
+  log_interval: 10
+  keep_last_n: 5
+
+evaluation:
+  metrics:
+    - "perplexity"
+    - "accuracy"
+    - "bleu"
+    - "chrf"
+  eval_data_path: "data/eval"
+
+logging:
+  tensorboard: true
+  tensorboard_dir: "runs/bilingual-7b"
+  wandb: false
+  wandb_project: "paperpower-7b"
+
+hardware:
+  device: "cuda"
+  precision: "bf16"
+  use_deepspeed: true
+  deepspeed_config: "configs/deepspeed_zero2.json"
+
+inference:
+  max_new_tokens: 2048
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  repetition_penalty: 1.1
