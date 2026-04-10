@@ -1,0 +1,23 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.24.0
+tqdm>=4.65.0
+
+# Optional but recommended
+transformers>=4.30.0
+datasets>=2.12.0
+accelerate>=0.20.0
+safetensors>=0.3.0
+
+# DeepSpeed (optional, for distributed training)
+# deepspeed>=0.10.0
+
+# Logging and monitoring
+tensorboard>=2.13.0
+# wandb>=0.15.0
+
+# Tokenizer
+regex>=2023.5.5
+
+# Utilities
+pyyaml>=6.0

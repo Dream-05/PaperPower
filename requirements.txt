@@ -1,0 +1,55 @@
+# 智办AI Python依赖
+
+# 核心框架
+torch>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Web服务
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+# 数据处理
+pandas>=2.0.0
+requests>=2.31.0
+
+# DeerFlow核心依赖
+langgraph>=0.0.20
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.10
+
+# 工作流引擎
+networkx>=3.0
+aiohttp>=3.8.0
+httpx>=0.24.0
+
+# 搜索和爬虫
+duckduckgo-search>=3.0.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# 代码执行
+jupyter-client>=7.0.0
+ipykernel>=6.0.0
+
+# 向量数据库（可选）
+# faiss-cpu>=1.7.4
+
+# 系统监控
+psutil>=5.9.0
+
+# 可选：分布式训练
+# deepspeed>=0.10.0
+# accelerate>=0.20.0
+
+# 可选：量化
+# bitsandbytes>=0.41.0
+
+# 开发工具
+pytest>=7.4.0
+black>=23.0.0
