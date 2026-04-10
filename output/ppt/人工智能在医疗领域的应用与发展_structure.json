@@ -1,0 +1,206 @@
+{
+  "title": "人工智能在医疗领域的应用与发展",
+  "style": "tech",
+  "pages": [
+    {
+      "type": "cover",
+      "title": "人工智能在医疗领域的应用与发展",
+      "subtitle": "专业演示文稿",
+      "content": [
+        "封面要点一",
+        "封面要点二",
+        "封面要点三",
+        "封面要点四"
+      ],
+      "bullets": [
+        "封面要点一",
+        "封面要点二",
+        "封面要点三",
+        "封面要点四"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_6387.png",
+      "layout": "cover",
+      "notes": "欢迎各位，今天我将为大家介绍我们的项目。"
+    },
+    {
+      "type": "toc",
+      "title": "目录",
+      "subtitle": "Contents",
+      "content": [
+        "目录要点一",
+        "目录要点二",
+        "目录要点三",
+        "目录要点四"
+      ],
+      "bullets": [
+        "目录要点一",
+        "目录要点二",
+        "目录要点三",
+        "目录要点四"
+      ],
+      "image_path": null,
+      "layout": "toc",
+      "notes": "这是本次演示的主要内容。"
+    },
+    {
+      "type": "content",
+      "title": "背景介绍",
+      "subtitle": "Background Introduction",
+      "content": [
+        "行业现状与发展趋势分析",
+        "市场需求与痛点识别",
+        "本项目的定位与价值",
+        "相关技术/产品发展历程"
+      ],
+      "bullets": [
+        "行业现状与发展趋势分析",
+        "市场需求与痛点识别",
+        "本项目的定位与价值",
+        "相关技术/产品发展历程"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_1500.png",
+      "layout": "content",
+      "notes": "这里将分析行业现状和市场需求。"
+    },
+    {
+      "type": "content",
+      "title": "核心内容",
+      "subtitle": "Core Content",
+      "content": [
+        "核心概念与原理",
+        "关键特性与优势",
+        "技术架构与实现方案",
+        "创新点与差异化"
+      ],
+      "bullets": [
+        "核心概念与原理",
+        "关键特性与优势",
+        "技术架构与实现方案",
+        "创新点与差异化"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_3524.png",
+      "layout": "content",
+      "notes": "重点介绍我们的核心产品/技术。"
+    },
+    {
+      "type": "content",
+      "title": "详细说明",
+      "subtitle": "Detailed Explanation",
+      "content": [
+        "功能模块详解",
+        "技术实现细节",
+        "使用方法与流程",
+        "性能与可靠性"
+      ],
+      "bullets": [
+        "功能模块详解",
+        "技术实现细节",
+        "使用方法与流程",
+        "性能与可靠性"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_3902.png",
+      "layout": "content",
+      "notes": "深入讲解技术实现和功能细节。"
+    },
+    {
+      "type": "gallery",
+      "title": "案例分析",
+      "subtitle": "Case Analysis",
+      "content": [
+        "成功案例展示",
+        "实际应用场景",
+        "用户反馈与评价",
+        "经验总结与启示"
+      ],
+      "bullets": [
+        "成功案例展示",
+        "实际应用场景",
+        "用户反馈与评价",
+        "经验总结与启示"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_3830.png",
+      "layout": "gallery",
+      "notes": "通过实际案例展示产品价值。"
+    },
+    {
+      "type": "data",
+      "title": "数据展示",
+      "subtitle": "Data Presentation",
+      "content": [
+        "关键数据指标分析",
+        "趋势与对比分析",
+        "预测与展望",
+        "数据驱动的决策"
+      ],
+      "bullets": [
+        "关键数据指标分析",
+        "趋势与对比分析",
+        "预测与展望",
+        "数据驱动的决策"
+      ],
+      "image_path": null,
+      "layout": "data",
+      "notes": "用数据说话，展示项目成果。"
+    },
+    {
+      "type": "content",
+      "title": "总结展望",
+      "subtitle": "Summary & Outlook",
+      "content": [
+        "项目成果总结",
+        "未来发展规划",
+        "面临的挑战与机遇",
+        "合作与发展建议"
+      ],
+      "bullets": [
+        "项目成果总结",
+        "未来发展规划",
+        "面临的挑战与机遇",
+        "合作与发展建议"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_4249.png",
+      "layout": "content",
+      "notes": "总结项目成果并展望未来发展。"
+    },
+    {
+      "type": "content",
+      "title": "Q&A",
+      "subtitle": "",
+      "content": [
+        "Q&A要点一",
+        "Q&A要点二",
+        "Q&A要点三",
+        "Q&A要点四"
+      ],
+      "bullets": [
+        "Q&A要点一",
+        "Q&A要点二",
+        "Q&A要点三",
+        "Q&A要点四"
+      ],
+      "image_path": "data\\assets\\ppt_images\\image_5695.png",
+      "layout": "content",
+      "notes": "欢迎大家提问和讨论。"
+    },
+    {
+      "type": "end",
+      "title": "感谢观看",
+      "subtitle": "Thank You",
+      "content": [
+        "封底要点一",
+        "封底要点二",
+        "封底要点三",
+        "封底要点四"
+      ],
+      "bullets": [
+        "封底要点一",
+        "封底要点二",
+        "封底要点三",
+        "封底要点四"
+      ],
+      "image_path": null,
+      "layout": "end",
+      "notes": "感谢大家的聆听和支持。"
+    }
+  ]
+}

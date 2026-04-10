@@ -1,0 +1,42 @@
+{
+  "name": "paperpower-ppt-addin",
+  "version": "1.0.0",
+  "description": "智办AI PPT智能生成 - 从需求到成品的端到端生成",
+  "main": "src/App.tsx",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --https",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@microsoft/office-js": "^1.1.79"
+  },
+  "devDependencies": {
+    "@types/office-js": "^1.0.312",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "keywords": [
+    "powerpoint",
+    "office-addin",
+    "ai",
+    "ppt-generation",
+    "smart-layout"
+  ],
+  "author": "智办AI Team",
+  "license": "MIT"
+}

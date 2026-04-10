@@ -1,0 +1,114 @@
+{
+  "title": "科技风项目介绍PPT",
+  "style": "tech",
+  "pages": [
+    {
+      "type": "cover",
+      "title": "封面",
+      "subtitle": "",
+      "bullets": [
+        "封面要点一",
+        "封面要点二",
+        "封面要点三"
+      ],
+      "notes": "【封面】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "full_image"
+    },
+    {
+      "type": "toc",
+      "title": "目录",
+      "subtitle": "Contents",
+      "bullets": [
+        "目录要点一",
+        "目录要点二",
+        "目录要点三"
+      ],
+      "notes": "【目录】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "left_nav"
+    },
+    {
+      "type": "content",
+      "title": "背景",
+      "subtitle": "",
+      "bullets": [
+        "背景要点一",
+        "背景要点二",
+        "背景要点三"
+      ],
+      "notes": "【背景】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "text_image_right"
+    },
+    {
+      "type": "content",
+      "title": "解决方案",
+      "subtitle": "",
+      "bullets": [
+        "核心功能模块",
+        "技术架构设计",
+        "创新点与优势"
+      ],
+      "notes": "【解决方案】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "text_image_right"
+    },
+    {
+      "type": "content",
+      "title": "技术优势",
+      "subtitle": "",
+      "bullets": [
+        "先进的技术栈",
+        "高性能与可扩展",
+        "安全可靠保障"
+      ],
+      "notes": "【技术优势】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "text_image_right"
+    },
+    {
+      "type": "content",
+      "title": "商业模式",
+      "subtitle": "",
+      "bullets": [
+        "盈利模式设计",
+        "市场定位策略",
+        "合作伙伴生态"
+      ],
+      "notes": "【商业模式】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "text_image_right"
+    },
+    {
+      "type": "content",
+      "title": "团队",
+      "subtitle": "",
+      "bullets": [
+        "团队要点一",
+        "团队要点二",
+        "团队要点三"
+      ],
+      "notes": "【团队】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "text_image_right"
+    },
+    {
+      "type": "content",
+      "title": "财务",
+      "subtitle": "",
+      "bullets": [
+        "财务要点一",
+        "财务要点二",
+        "财务要点三"
+      ],
+      "notes": "【财务】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "text_image_right"
+    },
+    {
+      "type": "end",
+      "title": "封底",
+      "subtitle": "感谢观看 | Thank You",
+      "bullets": [
+        "封底要点一",
+        "封底要点二",
+        "封底要点三"
+      ],
+      "notes": "【封底】讲解要点：请根据实际情况补充详细内容。",
+      "layout": "contact_info"
+    }
+  ]
+}

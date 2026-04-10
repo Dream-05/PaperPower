@@ -1,0 +1,226 @@
+{
+  "title": "科技风项目介绍",
+  "style": "tech",
+  "pages": [
+    {
+      "type": "cover",
+      "title": "科技风项目介绍",
+      "subtitle": "专业演示文稿",
+      "content": [
+        "封面要点一",
+        "封面要点二",
+        "封面要点三",
+        "封面要点四"
+      ],
+      "bullets": [
+        "封面要点一",
+        "封面要点二",
+        "封面要点三",
+        "封面要点四"
+      ],
+      "image_path": null,
+      "layout": "cover",
+      "notes": "欢迎各位，今天我将为大家介绍我们的项目。"
+    },
+    {
+      "type": "toc",
+      "title": "目录",
+      "subtitle": "Contents",
+      "content": [
+        "目录要点一",
+        "目录要点二",
+        "目录要点三",
+        "目录要点四"
+      ],
+      "bullets": [
+        "目录要点一",
+        "目录要点二",
+        "目录要点三",
+        "目录要点四"
+      ],
+      "image_path": null,
+      "layout": "toc",
+      "notes": "这是本次演示的主要内容。"
+    },
+    {
+      "type": "content",
+      "title": "项目背景",
+      "subtitle": "",
+      "content": [
+        "项目背景要点一",
+        "项目背景要点二",
+        "项目背景要点三",
+        "项目背景要点四"
+      ],
+      "bullets": [
+        "项目背景要点一",
+        "项目背景要点二",
+        "项目背景要点三",
+        "项目背景要点四"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "【项目背景】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "content",
+      "title": "解决方案",
+      "subtitle": "",
+      "content": [
+        "解决方案要点一",
+        "解决方案要点二",
+        "解决方案要点三",
+        "解决方案要点四"
+      ],
+      "bullets": [
+        "解决方案要点一",
+        "解决方案要点二",
+        "解决方案要点三",
+        "解决方案要点四"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "【解决方案】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "content",
+      "title": "技术架构",
+      "subtitle": "",
+      "content": [
+        "技术架构要点一",
+        "技术架构要点二",
+        "技术架构要点三",
+        "技术架构要点四"
+      ],
+      "bullets": [
+        "技术架构要点一",
+        "技术架构要点二",
+        "技术架构要点三",
+        "技术架构要点四"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "【技术架构】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "content",
+      "title": "商业模式",
+      "subtitle": "Business Model",
+      "content": [
+        "盈利模式设计",
+        "市场定位与策略",
+        "运营与增长计划",
+        "竞争优势分析"
+      ],
+      "bullets": [
+        "盈利模式设计",
+        "市场定位与策略",
+        "运营与增长计划",
+        "竞争优势分析"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "【商业模式】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "team",
+      "title": "团队介绍",
+      "subtitle": "Team Introduction",
+      "content": [
+        "核心团队成员",
+        "专业背景与经验",
+        "团队优势与文化",
+        "发展历程与成就"
+      ],
+      "bullets": [
+        "核心团队成员",
+        "专业背景与经验",
+        "团队优势与文化",
+        "发展历程与成就"
+      ],
+      "image_path": null,
+      "layout": "team",
+      "notes": "【团队介绍】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "content",
+      "title": "财务预测",
+      "subtitle": "Financial Forecast",
+      "content": [
+        "收入预测模型",
+        "成本结构分析",
+        "投资回报预期",
+        "风险评估与应对"
+      ],
+      "bullets": [
+        "收入预测模型",
+        "成本结构分析",
+        "投资回报预期",
+        "风险评估与应对"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "【财务预测】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "content",
+      "title": "风险分析",
+      "subtitle": "",
+      "content": [
+        "风险分析要点一",
+        "风险分析要点二",
+        "风险分析要点三",
+        "风险分析要点四"
+      ],
+      "bullets": [
+        "风险分析要点一",
+        "风险分析要点二",
+        "风险分析要点三",
+        "风险分析要点四"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "【风险分析】请根据实际情况补充详细讲解内容。"
+    },
+    {
+      "type": "content",
+      "title": "总结展望",
+      "subtitle": "Summary & Outlook",
+      "content": [
+        "项目成果总结",
+        "未来发展规划",
+        "面临的挑战与机遇",
+        "合作与发展建议"
+      ],
+      "bullets": [
+        "项目成果总结",
+        "未来发展规划",
+        "面临的挑战与机遇",
+        "合作与发展建议"
+      ],
+      "image_path": null,
+      "layout": "content",
+      "notes": "总结项目成果并展望未来发展。"
+    },
+    {
+      "type": "end",
+      "title": "感谢观看",
+      "subtitle": "Thank You",
+      "content": [
+        "封底要点一",
+        "封底要点二",
+        "封底要点三",
+        "封底要点四"
+      ],
+      "bullets": [
+        "封底要点一",
+        "封底要点二",
+        "封底要点三",
+        "封底要点四"
+      ],
+      "image_path": null,
+      "layout": "end",
+      "notes": "感谢大家的聆听和支持。"
+    }
+  ]
+}
