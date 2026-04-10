@@ -1,0 +1,45 @@
+# 智办AI - 生产环境Docker配置
+# 零成本方案：所有服务本地运行，无需云服务
+
+version: '3.8'
+
+services:
+  # 主API服务
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./logs:/app/logs
+    environment:
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY:-zhiban-ai-production-key-2024}
+      - LOG_LEVEL=INFO
+      - MODEL_PATH=/app/output/full_training/sft/final
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # 前端服务
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  data:
+  output:
+  logs:
