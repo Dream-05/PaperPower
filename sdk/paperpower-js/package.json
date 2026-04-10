@@ -1,0 +1,29 @@
+{
+  "name": "paperpower",
+  "version": "1.0.0",
+  "description": "PaperPower Bilingual AI Client SDK",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "jest",
+    "lint": "eslint src/"
+  },
+  "keywords": [
+    "ai",
+    "bilingual",
+    "llm",
+    "paperpower"
+  ],
+  "author": "PaperPower Team",
+  "license": "MIT",
+  "dependencies": {
+    "eventsource": "^2.0.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "tsup": "^8.0.0"
+  }
+}
